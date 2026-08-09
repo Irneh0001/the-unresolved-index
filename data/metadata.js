@@ -1,0 +1,1 @@
+export const metadata = { schemaVersion:"1.0.0", generatedAt:"2026-08-09T00:00:00.000Z", editorialStatus:"baseline", historyPolicy:"Forecast records are append-only; corrections create a new record with supersedes." };
