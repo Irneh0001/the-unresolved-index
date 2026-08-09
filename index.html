@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A living map of unresolved political, legal, economic, and geopolitical questions." />
+    <title>The Unresolved Index</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#topics">Skip to topics</a>
+    <header class="site-header"><a class="wordmark" href="#top">The Unresolved Index<span aria-hidden="true">.</span></a><span class="edition">Editorial baseline · MVP</span></header>
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">A living map of open questions</p>
+        <h1>What remains unresolved shapes what comes next.</h1>
+        <p class="lede">Track the facts, competing interpretations, and uncertain forecasts behind consequential public questions—country by country.</p>
+      </section>
+      <section class="control-panel" aria-label="Topic filters">
+        <label>Country <select id="country-filter"></select></label>
+        <label>Domain <select id="domain-filter"></select></label>
+        <label class="search-label">Search <input id="search" type="search" placeholder="Search topics and subtopics" /></label>
+        <fieldset><legend>Status</legend><div id="status-filters" class="status-filters"></div></fieldset>
+      </section>
+      <section class="signal-grid" aria-label="Index signals">
+        <article><span>Most active</span><strong id="most-active">—</strong></article>
+        <article><span>Most unresolved</span><strong id="most-unresolved">—</strong></article>
+        <article><span>Likely to change</span><strong id="likely-change">—</strong></article>
+      </section>
+      <section id="topics" class="topics-section"><div class="section-heading"><div><p class="eyebrow">Priority topics</p><h2>United States</h2></div><p id="result-count" aria-live="polite"></p></div><div id="topic-grid" class="topic-grid"></div></section>
+      <section class="methodology"><p class="eyebrow">Methodology</p><h2>Separate what happened from what it means—and from what may happen.</h2><div class="methodology-grid"><article><h3>Facts</h3><p>Verifiable events, legal or policy text, and attributed evidence. Every assertion should be sourced.</p></article><article><h3>Interpretation</h3><p>Competing explanations, positions, constraints, and causal analysis. Disagreement is made visible.</p></article><article><h3>Forecast</h3><p>Time-bound scenarios and confidence, preserved as historical records rather than overwritten.</p></article></div></section>
+    </main>
+    <footer><span>Built for evidence, disagreement, and revision.</span><a href="README.md">Project documentation</a></footer>
+    <dialog id="topic-dialog"><button class="dialog-close" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"the-unresolved-index","private":true,"type":"module","scripts":{"validate":"node js/validate-data.js","update-metadata":"node js/update-metadata.js","verify-forecast-history":"node js/verify-forecast-history.js","test":"npm run validate"}}
