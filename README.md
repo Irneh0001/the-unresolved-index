@@ -66,3 +66,7 @@ Forecasts are historical records, not a mutable “latest prediction.” Publish
 - Add source review and editorial workflow
 - Add explicit, append-only scheduled metadata snapshots
 - Add forecast calibration and resolution tracking
+
+## Phase 1 research engine
+
+Phase 1 adds auditable research infrastructure under `data/research/`, `schemas/`, `scripts/`, and `data/ledger/`. It does not research the web, call an AI API, publish new claims, or autonomously change forecasts or resolution status. See [the methodology](docs/methodology.md) and the scheduled `research-daily.yml` workflow.

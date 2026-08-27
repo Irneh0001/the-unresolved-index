@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["id","topic_id","date","title","description","event_type","importance","source_ids","materiality"],"properties":{"importance":{"type":"number","minimum":0,"maximum":100},"materiality":{"enum":["noise","context","material","structural","resolution_candidate"]}}}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["id","assessed_at","dimensions","rationale"],"properties":{"dimensions":{"type":"object","required":["importance","substantive_uncertainty","institutional_disagreement","decision_incompleteness","momentum"]}}}
