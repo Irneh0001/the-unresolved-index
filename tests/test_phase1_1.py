@@ -9,7 +9,8 @@ class EpistemicBaselineTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls): cls.data=snapshot()
  def test_unassessed_is_not_deeply_unresolved(self):
-  self.assertTrue(all(t['assessment_status']=='unassessed' and t['status'] is None for t in self.data['topics']))
+  unassessed=[t for t in self.data['topics'] if t['assessment_status']=='unassessed']
+  self.assertTrue(unassessed); self.assertTrue(all(t['status'] is None for t in unassessed))
  def test_unassessed_has_no_priority(self): self.assertTrue(all(x['priority'] is None for x in self.data['queue']))
  def test_disagreement_not_derived(self): self.assertTrue(all(t['institutional_disagreement'] is None for t in self.data['topics']))
  def test_decision_incompleteness_not_85(self): self.assertTrue(all(t['decision_incompleteness'] is None for t in self.data['topics']))

@@ -1,1 +1,5 @@
-export const claims = [];
+export const claims = [
+ {id:"clm-border-cbp-data",topic_id:"border-immigration",text:"CBP publishes encounter data for the southwest border, including Title 8 apprehensions, OFO inadmissibles, and Title 42 expulsions.",claim_type:"statistical",status:"verified",confidence:90,source_ids:["src-cbp-stats"],first_observed:"2024-01-01",last_verified:"2026-08-27",created_at:"2026-08-27",updated_at:"2026-08-27"},
+ {id:"clm-debt-cbo-baseline",topic_id:"federal-debt",text:"CBO's January 2025 baseline projected a $1.9 trillion FY2025 deficit and federal debt held by the public reaching 118% of GDP in 2035 under its stated assumptions.",claim_type:"statistical",status:"verified",confidence:95,source_ids:["src-cbo-outlook-2025"],first_observed:"2025-01-17",last_verified:"2026-08-27",created_at:"2026-08-27",updated_at:"2026-08-27"},
+ {id:"clm-ai-rmf-voluntary",topic_id:"ai-governance",text:"NIST AI RMF 1.0 is intended for voluntary use and provides a risk-management framework rather than a binding general AI regulatory regime.",claim_type:"policy",status:"verified",confidence:95,source_ids:["src-nist-ai-rmf"],first_observed:"2023-01-26",last_verified:"2026-08-27",created_at:"2026-08-27",updated_at:"2026-08-27"}
+];
