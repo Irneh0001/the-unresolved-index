@@ -8,28 +8,25 @@ def snapshot():
 class EpistemicBaselineTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls): cls.data=snapshot()
- def test_unassessed_is_not_deeply_unresolved(self):
-  unassessed=[t for t in self.data['topics'] if t['assessment_status']=='unassessed']
-  self.assertTrue(unassessed); self.assertTrue(all(t['status'] is None for t in unassessed))
- def test_unassessed_has_no_priority(self):
-  ids={t['id'] for t in self.data['topics'] if t['assessment_status']=='unassessed'}
-  self.assertTrue(all(x['priority'] is None for x in self.data['queue'] if x['topic_id'] in ids))
- def test_disagreement_not_derived(self): self.assertTrue(all(t['institutional_disagreement'] is None for t in self.data['topics'] if t['assessment_status']=='unassessed'))
- def test_decision_incompleteness_not_85(self): self.assertTrue(all(t['decision_incompleteness'] is None for t in self.data['topics'] if t['assessment_status']=='unassessed'))
+ def test_all_topics_have_reviewed_assessments(self):
+  self.assertEqual(20,len(self.data['topics']))
+  self.assertTrue(all(t['assessment_status']=='researched' for t in self.data['topics']))
+  self.assertTrue(all(t['status']=='active' for t in self.data['topics']))
+ def test_all_topics_have_priority(self):
+  self.assertTrue(all(x['priority'] is not None for x in self.data['queue']))
  def test_queue_dates_absent_until_run(self): self.assertTrue(all(x['created_at'] is None for x in self.data['queue']))
- def test_conservative_frequency(self): self.assertTrue(all(x['frequency']=='weekly' for x in self.data['queue'] if x['priority'] is None))
+ def test_reviewed_frequency(self): self.assertTrue(all(x['frequency']=='daily' for x in self.data['queue']))
  def test_audit_is_dynamic_and_infrastructure_only(self):
   text=(ROOT/'scripts/write_audit.py').read_text(); self.assertIn('research_mode',text); self.assertIn('len(queue)',text); self.assertNotIn('Topics queued: 20',text)
  def test_no_research_is_distinct_from_no_change(self):
   self.assertIn('no_research_performed', (ROOT/'scripts/write_audit.py').read_text()); self.assertIn('infrastructure_only',(ROOT/'.github/workflows/research-daily.yml').read_text())
  def test_forecast_history_guard_exists(self): self.assertTrue((ROOT/'scripts/verify_history.py').exists())
  def test_existing_site_entrypoint_unchanged(self): self.assertIn('js/app.js',(ROOT/'index.html').read_text())
- def test_reviewed_topics_have_assessment_dimensions(self):
-  reviewed=[t for t in self.data['topics'] if t['assessment_status']=='researched']
-  self.assertEqual({'border-immigration','federal-debt','ai-governance'},{t['id'] for t in reviewed})
-  for topic in reviewed:
+ def test_all_topics_have_assessment_dimensions(self):
+  for topic in self.data['topics']:
    dimensions=self.data['assessmentNotes'][topic['id']]['dimensions']
    for key in ('importance','substantive_uncertainty','institutional_disagreement','decision_incompleteness','momentum'):
-    self.assertEqual(topic['importance'] if key=='importance' else topic['uncertainty'] if key=='substantive_uncertainty' else topic[key],dimensions[key]['value'])
+    expected=topic['importance'] if key=='importance' else topic['uncertainty'] if key=='substantive_uncertainty' else topic[key]
+    self.assertEqual(expected,dimensions[key]['value'])
     self.assertTrue(dimensions[key]['basis'])
 if __name__=='__main__': unittest.main()
