@@ -20,3 +20,10 @@ export const researchTopics = mvpTopics.map(topic => ({
   assessment_history: [{ id:`${topic.id}-assessment-baseline`, assessed_at:null, kind:"editorial_baseline", assessment_status:"unassessed", dimensions:{ importance:topic.priority, substantive_uncertainty:null, institutional_disagreement:null, decision_incompleteness:null, momentum:topic.signals.likelyChange }, rationale:"Editorial metadata only; no evidence-based unresolved-state assessment has been made." }],
   forecast_history: [], editorial_baseline: true
 }));
+
+const pilotEvidence = {
+ "border-immigration": { assessment_status:"provisional", status:"active", claims:["clm-border-cbp-data"], events:["evt-cbp-published-stats"], sources:["src-cbp-stats"], last_assessed:"2026-08-27", next_review:"2026-09-03", rationale:"One primary operational source reviewed; this supports an evidence-backed baseline but not a complete system assessment." },
+ "federal-debt": { assessment_status:"provisional", status:"active", claims:["clm-debt-cbo-baseline"], events:["evt-cbo-baseline"], sources:["src-cbo-outlook-2025"], last_assessed:"2026-08-27", next_review:"2026-09-03", rationale:"CBO baseline reviewed; policy resolution and alternative assumptions remain unassessed." },
+ "ai-governance": { assessment_status:"provisional", status:"active", claims:["clm-ai-rmf-voluntary"], events:["evt-nist-rmf"], sources:["src-nist-ai-rmf"], last_assessed:"2026-08-27", next_review:"2026-09-03", rationale:"NIST primary guidance reviewed; broader binding legal and international landscape remains unassessed." }
+};
+for (const topic of researchTopics) { const p=pilotEvidence[topic.id]; if (p) Object.assign(topic,p,{assessment_history:[...topic.assessment_history,{id:`${topic.id}-assessment-20260827`,assessed_at:p.last_assessed,kind:"human_reviewed_pilot",assessment_status:p.assessment_status,dimensions:{importance:topic.importance,substantive_uncertainty:null,institutional_disagreement:null,decision_incompleteness:null,momentum:topic.momentum},rationale:p.rationale}]}); }
