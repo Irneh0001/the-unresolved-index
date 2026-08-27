@@ -22,4 +22,6 @@ class EpistemicBaselineTests(unittest.TestCase):
   self.assertIn('no_research_performed', (ROOT/'scripts/write_audit.py').read_text()); self.assertIn('infrastructure_only',(ROOT/'.github/workflows/research-daily.yml').read_text())
  def test_forecast_history_guard_exists(self): self.assertTrue((ROOT/'scripts/verify_history.py').exists())
  def test_existing_site_entrypoint_unchanged(self): self.assertIn('js/app.js',(ROOT/'index.html').read_text())
+ def test_assessment_notes_do_not_fabricate_scores(self):
+  self.assertIn('value:null',(ROOT/'data/research/assessment_notes.js').read_text())
 if __name__=='__main__': unittest.main()
