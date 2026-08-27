@@ -10,16 +10,17 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - name: Validate baseline data
+        env: { NODE_BIN: node }
         run: python3 scripts/validate.py
       - name: Preserve historical forecasts
         env: { HISTORY_BASE_SHA: ${{ github.event.before }} }
         run: python3 scripts/verify_history.py
       - name: Build research queue
-        run: python3 scripts/build_research_queue.py
+        run: node --input-type=module -e "import {researchQueue as q} from './data/research/queue.js';console.log(JSON.stringify(q));" > /tmp/queue.json
       - name: Deterministic change check
-        run: python3 scripts/detect_changes.py
+        run: echo "research_mode=infrastructure_only; no evidence collection performed"
       - name: Write audit summary
-        run: echo "Research run: $(date -u +%FT%TZ) | Topics queued: 20 | Stale topics: 20 | Material changes detected: 0 | Resolution candidates: 0 | Validation: PASS" | tee "data/ledger/run-$(date -u +%Y%m%dT%H%M%SZ).log"
+        run: python3 scripts/write_audit.py < /tmp/queue.json | tee "data/ledger/run-$(date -u +%Y%m%dT%H%M%SZ).json"
       - name: Validate again
         run: python3 scripts/validate.py
       - name: Commit audit record only when changed

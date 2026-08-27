@@ -2,6 +2,10 @@
 
 The Index tracks questions with meaningful substantive uncertainty, authoritative decision incompleteness, or unresolved implementation—not every public controversy. **Controversial is not unresolved**: a settled fact can be contested politically. **Uncertain is not unknown**: uncertainty is recorded with its bounds. **Newsworthy is not important**, **active is not close to resolution**, **agreement is not resolution**, and a temporary policy is not durable resolution.
 
+## Epistemic states
+
+**Identified** means a question is a candidate for the Index. **Unassessed** means it has not undergone evidence-based assessment; it is not a claim that the real-world question is deeply unresolved. **Unresolved**, **deeply unresolved**, **active**, **partially resolved**, and **resolved** are classifications made only after assessment. Absence of evidence is not evidence of unresolvedness.
+
 Topics enter when their consequence and unresolved question justify sustained review. They leave only when their explicit definition of resolved is met by an authoritative, durable outcome. Statuses are: `resolved` (conditions met); `partially_resolved` (some defined conditions met); `active` (live, material decision or implementation process); `deeply_unresolved` (no durable authoritative settlement); and `dormant` (no material movement, not resolved).
 
 Facts are independent claims with source links. Interpretation is attributed analysis and never displayed as fact. Forecasts are dated scenarios, not facts. Primary government, court, legislative and international documents generally establish what an institution did or said; they do not alone prove every substantive assertion they make. Commentary may explain but is not automatically stronger evidence than primary material.
