@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 NODE=os.environ.get('NODE_BIN','node')
 def snapshot():
- code="import {researchTopics as topics} from './data/research/topics.js'; import {researchQueue as queue} from './data/research/queue.js'; console.log(JSON.stringify({topics,queue}));"
+ code="import {researchTopics as topics} from './data/research/topics.js'; import {researchQueue as queue} from './data/research/queue.js'; import {assessmentNotes} from './data/research/assessment_notes.js'; console.log(JSON.stringify({topics,queue,assessmentNotes}));"
  return json.loads(subprocess.check_output([NODE,'--input-type=module','-e',code],cwd=ROOT,text=True))
 class EpistemicBaselineTests(unittest.TestCase):
  @classmethod
@@ -24,6 +24,12 @@ class EpistemicBaselineTests(unittest.TestCase):
   self.assertIn('no_research_performed', (ROOT/'scripts/write_audit.py').read_text()); self.assertIn('infrastructure_only',(ROOT/'.github/workflows/research-daily.yml').read_text())
  def test_forecast_history_guard_exists(self): self.assertTrue((ROOT/'scripts/verify_history.py').exists())
  def test_existing_site_entrypoint_unchanged(self): self.assertIn('js/app.js',(ROOT/'index.html').read_text())
- def test_assessment_notes_do_not_fabricate_scores(self):
-  self.assertIn('value:null',(ROOT/'data/research/assessment_notes.js').read_text())
+ def test_reviewed_topics_have_assessment_dimensions(self):
+  reviewed=[t for t in self.data['topics'] if t['assessment_status']=='researched']
+  self.assertEqual({'border-immigration','federal-debt','ai-governance'},{t['id'] for t in reviewed})
+  for topic in reviewed:
+   dimensions=self.data['assessmentNotes'][topic['id']]['dimensions']
+   for key in ('importance','substantive_uncertainty','institutional_disagreement','decision_incompleteness','momentum'):
+    self.assertEqual(topic['importance'] if key=='importance' else topic['uncertainty'] if key=='substantive_uncertainty' else topic[key],dimensions[key]['value'])
+    self.assertTrue(dimensions[key]['basis'])
 if __name__=='__main__': unittest.main()
