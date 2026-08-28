@@ -80,3 +80,7 @@ Cadence defaults follow the topic domain (geopolitics six hours, governance/law/
 ### Human review
 
 Open `review.html` from the published site (also linked in the homepage footer). It lists candidate updates produced by discovery, including the topic, source, publication date, excerpt, and a direct source link. **Approve for editorial processing** and **Reject candidate** decisions are stored locally in the browser for this MVP; use **Export decisions** to create a JSON handoff for a maintainer. Approval does not publish a claim automatically. A maintainer must convert an approved candidate into a sourced claim/event/position or append-only forecast record in a reviewed pull request.
+
+## Consequence and non-resolution risk model
+
+Each topic has a record in `data/research/consequences.js` with a short-term consequence, a long-term consequence if unresolved, severity, confidence, and a non-resolution risk score. These are explicitly labeled editorial assessments and are not treated as current facts. The queue priority calculation incorporates risk alongside importance, uncertainty, and momentum. The topic detail dialog displays the consequence box and its assessment confidence.

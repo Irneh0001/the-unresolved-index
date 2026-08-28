@@ -1,3 +1,4 @@
 import { researchTopics } from "./topics.js";
-export function priorityFor(topic) { return [topic.importance,topic.uncertainty,topic.momentum].every(Number.isFinite) ? Math.round(topic.importance*topic.uncertainty*topic.momentum/10000) : null; }
+import { consequences } from "./consequences.js";
+export function priorityFor(topic) { const risk=consequences.find(c=>c.topic_id===topic.id)?.risk_score; return [topic.importance,topic.uncertainty,topic.momentum,risk].every(Number.isFinite) ? Math.round(topic.importance*.25+topic.uncertainty*.2+topic.momentum*.15+risk*.4) : null; }
 export const researchQueue = researchTopics.map(topic => ({ topic_id:topic.id, priority:priorityFor(topic), reason:topic.assessment_status==='researched'?"reviewed evidence baseline":"unassessed editorial baseline requires evidence review", created_at:null, last_run:null, next_run:null, frequency:topic.assessment_status==='unassessed'?"weekly":"daily", scheduling_basis:"provisional editorial scheduling heuristic; conservative default for unassessed topics" }));

@@ -3,7 +3,7 @@ from pathlib import Path
 import json, os, subprocess, sys
 ROOT = Path(__file__).resolve().parents[1]
 NODE = os.environ.get("NODE_BIN", "node")
-JS = """import {researchTopics as topics} from './data/research/topics.js';import {claims} from './data/research/claims.js';import {sources} from './data/research/sources.js';import {events} from './data/research/events.js';import {forecasts} from './data/research/forecasts.js';import {positions} from './data/research/positions.js';console.log(JSON.stringify({topics,claims,sources,events,forecasts,positions}));"""
+JS = """import {researchTopics as topics} from './data/research/topics.js';import {claims} from './data/research/claims.js';import {sources} from './data/research/sources.js';import {events} from './data/research/events.js';import {forecasts} from './data/research/forecasts.js';import {positions} from './data/research/positions.js';import {consequences} from './data/research/consequences.js';console.log(JSON.stringify({topics,claims,sources,events,forecasts,positions,consequences}));"""
 def records():
     return json.loads(subprocess.check_output([NODE, "--input-type=module", "-e", JS], cwd=ROOT, text=True))
 def unique(rows, label, errors):
@@ -25,6 +25,9 @@ def main():
         if any(s not in source_ids for s in c['source_ids']): errors.append(f"{c['id']}: broken source reference")
     for e in d['events']:
         if e['topic_id'] not in topic_ids: errors.append(f"{e['id']}: broken topic reference")
+    for c in d['consequences']:
+        if c['topic_id'] not in topic_ids or not c['short_term'] or not c['long_term_if_unresolved']: errors.append(f"{c['id']}: invalid consequence")
+        if not 0<=c['severity']<=100 or not 0<=c['risk_score']<=100 or not 0<=c['confidence']<=100: errors.append(f"{c['id']}: invalid consequence score")
     for p in d['positions']:
         if p['topic_id'] not in topic_ids or any(s not in source_ids for s in p['source_ids']): errors.append(f"{p['id']}: broken reference")
     for f in d['forecasts']:
