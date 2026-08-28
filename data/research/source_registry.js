@@ -7,7 +7,7 @@ const feedOverrides = {
   "src-ftc-ai-comply": "https://www.ftc.gov/feeds/press-release.xml",
   "src-big-tech-anchor": "https://www.ftc.gov/feeds/press-release-competition.xml",
   "src-epstein-accountability-anchor": "https://www.justice.gov/news/rss?field_component=376&require_all=0&search_api_language=en&show_public_archived=0&type%5B0%5D=image_gallery&type%5B1%5D=press_release&type%5B2%5D=speech&type%5B3%5D=youtube_video",
-  "src-law-enforcement-independence-anchor": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
+  "src-law-enforcement-independence-anchor": "https://www.justice.gov/news/rss?field_component=376&require_all=0&search_api_language=en&show_public_archived=0&type%5B0%5D=image_gallery&type%5B1%5D=press_release&type%5B2%5D=speech&type%5B3%5D=youtube_video",
   "src-energy-grid-anchor": "https://www.eia.gov/rss/press_rss.xml",
   "src-fertility-anchor": "https://www.census.gov/newsroom/press-releases/by-year.xml",
   "src-tariffs-trade-anchor": "https://ustr.gov/archive/Meta_Content/RSS/ustr_press_releases_10475.xml"
