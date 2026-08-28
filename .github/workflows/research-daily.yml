@@ -32,4 +32,4 @@ jobs:
       - name: Commit audit record only when changed
         run: |
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ledger; git diff --cached --quiet || (git commit -m "chore: record research queue run" && git push)
+          git add data/ledger data/research/candidates.generated.json; git diff --cached --quiet || (git commit -m "chore: record research queue run" && git push)
