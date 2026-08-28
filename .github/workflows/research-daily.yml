@@ -1,5 +1,5 @@
 name: Research queue maintenance
-on: { workflow_dispatch: {}, schedule: [{ cron: '23 5 * * *' }] }
+on: { workflow_dispatch: {}, schedule: [{ cron: '23 * * * *' }] }
 permissions: { contents: write }
 jobs:
   research-infrastructure:
