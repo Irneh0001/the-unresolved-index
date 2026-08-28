@@ -1,4 +1,7 @@
 import { sources } from "./sources.js";
+import { claims } from "./claims.js";
+
+const topicByClaim = new Map(claims.map(claim => [claim.id, claim.topic_id]));
 
 const cadenceByDomain = {
   Geopolitics: 6,
@@ -11,6 +14,7 @@ const cadenceByDomain = {
 
 export const sourceRegistry = sources.map(source => ({
   ...source,
+  topic_id: source.topic_id ?? source.supports_claims.map(id => topicByClaim.get(id)).find(Boolean) ?? null,
   enabled: source.enabled ?? true,
   access_method: source.access_method ?? "manual_review",
   feed_url: source.feed_url ?? null,
