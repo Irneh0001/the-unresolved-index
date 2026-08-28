@@ -70,3 +70,9 @@ Forecasts are historical records, not a mutable “latest prediction.” Publish
 ## Phase 1 research engine
 
 Phase 1 adds auditable research infrastructure under `data/research/`, `schemas/`, `scripts/`, and `data/ledger/`. It does not research the web, call an AI API, publish new claims, or autonomously change forecasts or resolution status. See [the methodology](docs/methodology.md) and the scheduled `research-daily.yml` workflow.
+
+## Source discovery engine
+
+The Phase 3 discovery layer is deliberately separate from publication. `data/research/source_registry.js` adds per-source cadence, access method, enablement, and check timestamps. `scripts/discover-sources.mjs` fetches configured RSS/Atom feeds, normalizes items, deduplicates URLs, and emits candidate updates. Candidates are stored in `data/research/candidates.generated.json` by the scheduled workflow and remain `pending` until an editor reviews them. A candidate can then be promoted into a sourced claim, event, position, or forecast revision; discovery never silently changes published records.
+
+Cadence defaults follow the topic domain (geopolitics six hours, governance/law/technology daily, economy every three days, society monthly) and can be overridden per source. Sources without a configured `feed_url` are intentionally not fetched until an adapter is added. This keeps the engine dependency-free and makes source coverage explicit.
