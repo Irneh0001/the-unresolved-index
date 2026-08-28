@@ -19,6 +19,8 @@ jobs:
         run: node --input-type=module -e "import {researchQueue as q} from './data/research/queue.js';console.log(JSON.stringify(q));" > /tmp/queue.json
       - name: Deterministic change check
         run: echo "research_mode=infrastructure_only; no evidence collection performed"
+      - name: Ensure audit ledger directory exists
+        run: mkdir -p data/ledger
       - name: Write audit summary
         run: python3 scripts/write_audit.py < /tmp/queue.json | tee "data/ledger/run-$(date -u +%Y%m%dT%H%M%SZ).json"
       - name: Validate again
