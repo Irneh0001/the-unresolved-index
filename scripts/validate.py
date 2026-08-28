@@ -33,7 +33,8 @@ def main():
     for f in d['forecasts']:
         if f['topic_id'] not in topic_ids: errors.append(f"{f['id']}: broken topic reference")
         if not 0<=f['confidence']<=100 or not f['rationale'] or not f['evidence_ids'] or any(c not in {x['id'] for x in d['claims']} for c in f['evidence_ids']): errors.append(f"{f['id']}: invalid forecast")
-        if any(not 0<=p<=100 for p in f['probabilities'].values()): errors.append(f"{f['id']}: invalid probability")
+        if f.get('status')=="published" and not isinstance(f.get('probabilities'),dict): errors.append(f"{f['id']}: published forecast needs probabilities")
+        if isinstance(f.get('probabilities'),dict) and any(not 0<=p<=100 for p in f['probabilities'].values()): errors.append(f"{f['id']}: invalid probability")
     if errors: print('\n'.join(errors)); return 1
     print(f"PASS: {len(d['topics'])} topics, {len(d['claims'])} claims, {len(d['sources'])} sources, {len(d['events'])} events, {len(d['forecasts'])} forecasts")
     return 0
