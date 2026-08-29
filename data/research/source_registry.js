@@ -6,17 +6,15 @@ const topicByClaim = new Map(claims.map(claim => [claim.id, claim.topic_id]));
 const feedOverrides = {
   "src-ftc-ai-comply": "https://www.ftc.gov/feeds/press-release.xml",
   "src-big-tech-anchor": "https://www.ftc.gov/feeds/press-release-competition.xml",
-  "src-law-enforcement-independence-anchor": "https://www.justice.gov/news/rss?field_component=376&require_all=0&search_api_language=en&show_public_archived=0&type%5B0%5D=image_gallery&type%5B1%5D=press_release&type%5B2%5D=speech&type%5B3%5D=youtube_video",
   "src-energy-grid-anchor": "https://www.eia.gov/rss/press_rss.xml",
   "src-fertility-anchor": "https://www.census.gov/newsroom/press-releases/by-year.xml",
-  "src-tariffs-trade-anchor": "https://ustr.gov/archive/Meta_Content/RSS/ustr_press_releases_10475.xml"
 };
 
 const feedFilters = {
-  "src-ftc-ai-comply": ["ai", "artificial intelligence", "machine learning", "automated decision", "algorithmic"],
-  "src-big-tech-anchor": ["digital", "online", "internet", "platform", "software", "cloud", "technology", "social media", "search engine", "advertising"],
+  "src-ftc-ai-comply": ["ai-powered", "artificial intelligence", "machine learning", "automated decision", "algorithmic"],
+  "src-big-tech-anchor": ["digital advertising", "semiconductor", "software", "cloud", "technology platform", "social media", "search engine", "online platform"],
   "src-law-enforcement-independence-anchor": ["justice department", "fbi", "inspector general", "law enforcement", "prosecut", "oversight", "misconduct", "independence"],
-  "src-energy-grid-anchor": ["electricity", "grid", "power", "generator", "generation", "natural gas", "energy", "data center"],
+  "src-energy-grid-anchor": ["electricity", "grid", "power", "natural gas", "energy outlook", "data center"],
   "src-fertility-anchor": ["population", "birth", "fertility", "demographic", "migration"],
   "src-tariffs-trade-anchor": ["tariff", "trade", "export", "import", "customs", "commerce", "agreement"]
 };
