@@ -8,6 +8,7 @@ const feedOverrides = {
   "src-big-tech-anchor": "https://www.ftc.gov/feeds/press-release-competition.xml",
   "src-energy-grid-anchor": "https://www.eia.gov/rss/press_rss.xml",
   "src-fertility-anchor": "https://www.census.gov/newsroom/press-releases/by-year.xml",
+  "src-iran-un-ceasefire-20260615": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
 };
 
 const feedFilters = {
@@ -16,7 +17,8 @@ const feedFilters = {
   "src-law-enforcement-independence-anchor": ["justice department", "fbi", "inspector general", "law enforcement", "prosecut", "oversight", "misconduct", "independence"],
   "src-energy-grid-anchor": ["electricity", "grid", "power", "natural gas", "energy outlook", "data center"],
   "src-fertility-anchor": ["population", "birth", "fertility", "demographic", "migration"],
-  "src-tariffs-trade-anchor": ["tariff", "trade", "export", "import", "customs", "commerce", "agreement"]
+  "src-tariffs-trade-anchor": ["tariff", "trade", "export", "import", "customs", "commerce", "agreement"],
+  "src-iran-un-ceasefire-20260615": ["iran", "nuclear", "hormuz", "ceasefire", "sanctions", "iaea", "conflict", "negotiation"]
 };
 
 const cadenceByDomain = {
