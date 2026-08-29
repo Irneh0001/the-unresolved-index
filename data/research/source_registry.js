@@ -6,11 +6,19 @@ const topicByClaim = new Map(claims.map(claim => [claim.id, claim.topic_id]));
 const feedOverrides = {
   "src-ftc-ai-comply": "https://www.ftc.gov/feeds/press-release.xml",
   "src-big-tech-anchor": "https://www.ftc.gov/feeds/press-release-competition.xml",
-  "src-epstein-accountability-anchor": "https://www.justice.gov/news/rss?field_component=376&require_all=0&search_api_language=en&show_public_archived=0&type%5B0%5D=image_gallery&type%5B1%5D=press_release&type%5B2%5D=speech&type%5B3%5D=youtube_video",
   "src-law-enforcement-independence-anchor": "https://www.justice.gov/news/rss?field_component=376&require_all=0&search_api_language=en&show_public_archived=0&type%5B0%5D=image_gallery&type%5B1%5D=press_release&type%5B2%5D=speech&type%5B3%5D=youtube_video",
   "src-energy-grid-anchor": "https://www.eia.gov/rss/press_rss.xml",
   "src-fertility-anchor": "https://www.census.gov/newsroom/press-releases/by-year.xml",
   "src-tariffs-trade-anchor": "https://ustr.gov/archive/Meta_Content/RSS/ustr_press_releases_10475.xml"
+};
+
+const feedFilters = {
+  "src-ftc-ai-comply": ["ai", "artificial intelligence", "machine learning", "automated decision", "algorithmic"],
+  "src-big-tech-anchor": ["digital", "online", "internet", "platform", "software", "cloud", "technology", "social media", "search engine", "advertising"],
+  "src-law-enforcement-independence-anchor": ["justice department", "fbi", "inspector general", "law enforcement", "prosecut", "oversight", "misconduct", "independence"],
+  "src-energy-grid-anchor": ["electricity", "grid", "power", "generator", "generation", "natural gas", "energy", "data center"],
+  "src-fertility-anchor": ["population", "birth", "fertility", "demographic", "migration"],
+  "src-tariffs-trade-anchor": ["tariff", "trade", "export", "import", "customs", "commerce", "agreement"]
 };
 
 const cadenceByDomain = {
@@ -30,7 +38,8 @@ export const sourceRegistry = sources.map(source => ({
   feed_url: source.feed_url ?? feedOverrides[source.id] ?? null,
   cadence_hours: source.cadence_hours ?? cadenceByDomain[source.domains?.[0]] ?? 168,
   last_checked_at: source.last_checked_at ?? null,
-  next_check_at: source.next_check_at ?? null
+  next_check_at: source.next_check_at ?? null,
+  filter_keywords: feedFilters[source.id] ?? null
 }));
 
 export function dueSources(now = new Date()) {
@@ -44,4 +53,11 @@ export function dueSources(now = new Date()) {
 
 export function nextCheckAt(source, checkedAt = new Date()) {
   return new Date(new Date(checkedAt).getTime() + source.cadence_hours * 3600000).toISOString();
+}
+
+export function matchesSourceFilter(source, item) {
+  const keywords = source.filter_keywords;
+  if (!keywords?.length) return true;
+  const text = [item.title, item.summary].filter(Boolean).join(" ").toLowerCase();
+  return keywords.some(keyword => text.includes(keyword));
 }

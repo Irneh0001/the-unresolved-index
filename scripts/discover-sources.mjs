@@ -1,4 +1,4 @@
-import { dueSources, nextCheckAt } from "../data/research/source_registry.js";
+import { dueSources, nextCheckAt, matchesSourceFilter } from "../data/research/source_registry.js";
 import { dedupeCandidates, normalizeCandidate } from "../data/research/candidates.js";
 
 export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
@@ -10,7 +10,9 @@ export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
       const response = await fetchImpl(source.feed_url, { headers: { accept: "application/rss+xml, application/atom+xml, text/xml" } });
       if (!response.ok) throw new Error("HTTP " + response.status);
       const xml = await response.text();
-      for (const item of parseFeed(xml)) candidates.push(normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...item }));
+      for (const item of parseFeed(xml)) {
+        if (matchesSourceFilter(source, item)) candidates.push(normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...item }));
+      }
     } catch (error) {
       errors.push({ source_id: source.id, error: String(error.message ?? error), checked_at: now.toISOString(), next_check_at: nextCheckAt(source, now) });
     }
