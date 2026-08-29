@@ -1,11 +1,13 @@
 import { dueSources, nextCheckAt, matchesSourceFilter } from "../data/research/source_registry.js";
 import { dedupeCandidates, normalizeCandidate } from "../data/research/candidates.js";
 import { sources } from "../data/research/sources.js";
+import { readFile } from "node:fs/promises";
 
 export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
   const due = dueSources(now).filter(source => source.feed_url);
   const candidates = [];
   const publishedUrls = new Set(sources.map(source => source.url).filter(Boolean).map(url => canonicalUrl(url)));
+  const reviewed = await loadReviewedDecisions();
   const errors = [];
   for (const source of due) {
     try {
@@ -15,7 +17,9 @@ export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
       for (const item of parseFeed(xml)) {
         if (matchesSourceFilter(source, item)) {
           const normalizedItem = { ...item, url: canonicalUrl(item.url, source.feed_url) };
-          if (!publishedUrls.has(normalizedItem.url)) candidates.push(normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...normalizedItem }));
+          const candidate = normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...normalizedItem });
+          const legacyPrefix = `candidate-${candidate.source_id}-${candidate.published_at || "undated"}-`;
+          if (!publishedUrls.has(normalizedItem.url) && !reviewed.has(candidate.id) && ![...reviewed].some(id => id.startsWith(legacyPrefix))) candidates.push(candidate);
         }
       }
     } catch (error) {
@@ -42,4 +46,11 @@ function text(xml, tag) {
 
 function canonicalUrl(url, base) {
   try { return new URL(url, base).href; } catch { return String(url ?? ""); }
+}
+
+async function loadReviewedDecisions() {
+  try {
+    const file = await readFile(new URL("../data/research/review-decisions/unresolved-index-review-decisions.json", import.meta.url), "utf8");
+    return new Set(Object.keys(JSON.parse(file).decisions || {}));
+  } catch { return new Set(); }
 }
