@@ -56,6 +56,6 @@ export function nextCheckAt(source, checkedAt = new Date()) {
 export function matchesSourceFilter(source, item) {
   const keywords = source.filter_keywords;
   if (!keywords?.length) return true;
-  const text = [item.title, item.summary].filter(Boolean).join(" ").toLowerCase();
+  const text = String(item.title ?? "").toLowerCase();
   return keywords.some(keyword => text.includes(keyword));
 }
