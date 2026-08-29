@@ -1,9 +1,11 @@
 import { dueSources, nextCheckAt, matchesSourceFilter } from "../data/research/source_registry.js";
 import { dedupeCandidates, normalizeCandidate } from "../data/research/candidates.js";
+import { sources } from "../data/research/sources.js";
 
 export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
   const due = dueSources(now).filter(source => source.feed_url);
   const candidates = [];
+  const publishedUrls = new Set(sources.map(source => source.url).filter(Boolean).map(url => canonicalUrl(url)));
   const errors = [];
   for (const source of due) {
     try {
@@ -11,7 +13,10 @@ export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
       if (!response.ok) throw new Error("HTTP " + response.status);
       const xml = await response.text();
       for (const item of parseFeed(xml)) {
-        if (matchesSourceFilter(source, item)) candidates.push(normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...item }));
+        if (matchesSourceFilter(source, item)) {
+          const normalizedItem = { ...item, url: canonicalUrl(item.url, source.feed_url) };
+          if (!publishedUrls.has(normalizedItem.url)) candidates.push(normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...normalizedItem }));
+        }
       }
     } catch (error) {
       errors.push({ source_id: source.id, error: String(error.message ?? error), checked_at: now.toISOString(), next_check_at: nextCheckAt(source, now) });
@@ -33,4 +38,8 @@ function parseFeed(xml) {
 function text(xml, tag) {
   const pattern = "<" + tag + "[^>]*>([\\s\\S]*?)</" + tag + ">";
   return xml.match(new RegExp(pattern, "i"))?.[1]?.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, "").trim() ?? "";
+}
+
+function canonicalUrl(url, base) {
+  try { return new URL(url, base).href; } catch { return String(url ?? ""); }
 }
