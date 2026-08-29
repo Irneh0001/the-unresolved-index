@@ -13,8 +13,20 @@ export function normalizeCandidate({source_id, topic_id, title, url, published_a
 export function dedupeCandidates(rows) {
   const seen = new Set();
   return rows.filter(row => {
-    const key = row.url || [row.source_id,row.title,row.published_at].join("|");
+    const key = row.url ? normalizeUrl(row.url) : [row.source_id,row.title,row.published_at].join("|");
     if (seen.has(key)) return false;
     seen.add(key); return true;
   });
+}
+
+function normalizeUrl(url) {
+  try {
+    const parsed = new URL(url);
+    parsed.hash = "";
+    parsed.hostname = parsed.hostname.toLowerCase();
+    parsed.pathname = parsed.pathname.replace(/\/+$/, "") || "/";
+    return parsed.href;
+  } catch {
+    return String(url).trim().replace(/\/+$/, "");
+  }
 }
