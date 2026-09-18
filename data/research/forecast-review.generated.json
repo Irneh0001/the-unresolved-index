@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-09-18T11:26:17.471Z",
+  "reviews": [
+    {
+      "topic_id": "birthright-citizenship",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "epstein-accountability",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "ukraine-russia",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "israel-gaza",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "china-taiwan",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "tariffs-trade",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "social-security",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "medicaid-financing",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "ai-governance",
+      "latest_evidence_at": "2026-08-29",
+      "latest_forecast_id": "fc-ai-1y-20260827",
+      "latest_forecast_at": "2026-08-27",
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "government-restructuring",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "abortion-policy",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "housing",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "election-rules",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "law-enforcement-independence",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "fertility",
+      "latest_evidence_at": "2026-08-27",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    },
+    {
+      "topic_id": "big-tech",
+      "latest_evidence_at": "2026-08-29",
+      "latest_forecast_id": null,
+      "latest_forecast_at": null,
+      "forecast_stale": true,
+      "reason": "newer evidence requires an append-only forecast update"
+    }
+  ]
+}
