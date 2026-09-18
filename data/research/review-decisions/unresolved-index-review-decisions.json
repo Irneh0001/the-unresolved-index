@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-28T17:26:46.977Z",
+  "exported_at": "2026-09-18T08:00:00.000Z",
   "decisions": {
     "candidate-src-tariffs-trade-anchor-Mon, 30 Mar 2009-..%2F..%2Fassets%2FDocument_Libr": "rejected",
     "candidate-src-tariffs-trade-anchor-Tue, 23 Dec 2008-..%2F..%2Fassets%2FDocument_Libr": "rejected",
@@ -69,6 +69,11 @@
     "candidate-src-big-tech-anchor-Thu, 23 Apr 2026 08:00:00 -0400-https%3A%2F%2Fwww.ftc.gov%2Fnews": "approved",
     "candidate-src-big-tech-anchor-Fri, 17 Apr 2026 08:00:00 -0400-https%3A%2F%2Fwww.ftc.gov%2Fnews": "approved",
     "candidate-src-big-tech-anchor-Wed, 15 Apr 2026 08:00:00 -0400-https%3A%2F%2Fwww.ftc.gov%2Fnews": "approved",
-    "candidate-src-big-tech-anchor-Fri, 03 Apr 2026 08:00:00 -0400-https%3A%2F%2Fwww.ftc.gov%2Fnews": "approved"
+    "candidate-src-big-tech-anchor-Fri, 03 Apr 2026 08:00:00 -0400-https%3A%2F%2Fwww.ftc.gov%2Fnews": "approved",
+    "candidate-src-energy-grid-anchor-Wed, 09 Sep 2026 12:00:00 EST-https%3A%2F%2Fwww.eia.gov%2Fpres": "approved",
+    "candidate-src-iran-un-ceasefire-20260615-Thu, 17 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
+    "candidate-src-iran-un-ceasefire-20260615-Wed, 16 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Tue, 15 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Mon, 14 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved"
   }
 }
