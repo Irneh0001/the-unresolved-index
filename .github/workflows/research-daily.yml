@@ -12,6 +12,8 @@ jobs:
       - name: Validate baseline data
         env: { NODE_BIN: node }
         run: python3 scripts/validate.py
+      - name: Test candidate queue merge
+        run: node --test tests/merge-candidates.test.mjs
       - name: Preserve historical forecasts
         env:
           HISTORY_BASE_SHA: "${{ github.event.before }}"
