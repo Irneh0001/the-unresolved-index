@@ -1,0 +1,46 @@
+name: Apply reviewed research updates
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  apply-reviewed-updates:
+    if: github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, '<!-- unresolved-index-review:v1')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Create implementation branch
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: git switch -c "automation/review-${ISSUE_NUMBER}"
+      - name: Apply approved candidates
+        env:
+          REVIEW_BODY: ${{ github.event.issue.body }}
+        run: node scripts/apply-approved-candidates.mjs
+      - name: Validate generated records
+        run: |
+          python3 scripts/validate.py
+          node --test tests/merge-candidates.test.mjs tests/apply-reviewed-candidates.test.mjs
+      - name: Create implementation PR
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research/approved-updates.js data/research/candidates.generated.json data/research/review-decisions/unresolved-index-review-decisions.json
+          git diff --cached --quiet && { echo "No changes to apply."; exit 0; }
+          git commit -m "feat: apply reviewed research updates"
+          git push --set-upstream origin "automation/review-${ISSUE_NUMBER}"
+          gh pr create --base main --head "automation/review-${ISSUE_NUMBER}" --title "Apply reviewed research updates (#${ISSUE_NUMBER})" --body "Generated from review issue #${ISSUE_NUMBER}. Approved candidates become source/event records in data/research/approved-updates.js. Forecast history remains append-only."
+          gh issue comment "${ISSUE_NUMBER}" --body "The reviewed updates were converted into an implementation PR. Please review and merge it before publication."
+          gh issue close "${ISSUE_NUMBER}"
