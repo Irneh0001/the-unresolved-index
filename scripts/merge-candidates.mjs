@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { dedupeCandidates } from "../data/research/candidates.js";
+import { dedupeCandidates, withAutomatedReviewComment } from "../data/research/candidates.js";
 
 const [discoveredPath = "/tmp/candidates.json", queuePath = "data/research/candidates.generated.json"] = process.argv.slice(2);
 
@@ -7,7 +7,7 @@ export function mergeCandidateQueues({ existing = {}, discovered = {}, reviewedI
   const pending = dedupeCandidates([
     ...(Array.isArray(existing.candidates) ? existing.candidates : []),
     ...(Array.isArray(discovered.candidates) ? discovered.candidates : [])
-  ]).filter(candidate => !isReviewed(candidate, reviewedIds));
+  ]).filter(candidate => !isReviewed(candidate, reviewedIds)).map(candidate => withAutomatedReviewComment(candidate));
 
   return {
     checked_at: discovered.checked_at ?? existing.checked_at ?? new Date().toISOString(),
