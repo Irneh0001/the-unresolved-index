@@ -26,7 +26,13 @@
         "score": 90,
         "label": "likely pertinent",
         "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
-        "basis": ["routed to topic iran-war-end-state", "discovered through source src-iran-un-ceasefire-20260615", "source link is available", "the feed supplies a substantive excerpt", "text mentions armed conflict"],
+        "basis": [
+          "routed to topic iran-war-end-state",
+          "discovered through source src-iran-un-ceasefire-20260615",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions armed conflict"
+        ],
         "generated_at": "2026-09-28T00:52:05.626Z",
         "method": "deterministic editorial triage; not an AI or publication decision"
       }
@@ -49,31 +55,14 @@
         "score": 90,
         "label": "likely pertinent",
         "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
-        "basis": ["routed to topic iran-war-end-state", "discovered through source src-iran-un-ceasefire-20260615", "source link is available", "the feed supplies a substantive excerpt", "text mentions Iran-related developments"],
+        "basis": [
+          "routed to topic iran-war-end-state",
+          "discovered through source src-iran-un-ceasefire-20260615",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions Iran-related developments"
+        ],
         "generated_at": "2026-09-25T13:55:22.631Z",
-        "method": "deterministic editorial triage; not an AI or publication decision"
-      }
-    },
-    {
-      "id": "candidate-src-iran-un-ceasefire-20260615-Tue, 22 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed",
-      "source_id": "src-iran-un-ceasefire-20260615",
-      "topic_id": "iran-war-end-state",
-      "title": "Trump defends military action against Iran, Venezuela, and calls for rebrand of AI",
-      "url": "https://news.un.org/feed/view/en/story/2026/09/1168397",
-      "published_at": "Tue, 22 Sep 2026 12:00:00 +0000",
-      "discovered_at": "2026-09-24T22:29:32.308Z",
-      "summary": "US President Donald Trump used his address to the UN General Assembly on Tuesday to defend recent military action against Iran, urging countries to maintain economic pressure on Tehran – and declaring that he now faces a choice between making a deal, or taking far more drastic steps.",
-      "review_status": "pending",
-      "proposed_claims": [],
-      "proposed_events": [],
-      "proposed_forecast_implications": [],
-      "automated_review_comment": {
-        "assessment": "likely_pertinent",
-        "score": 90,
-        "label": "likely pertinent",
-        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
-        "basis": ["routed to topic iran-war-end-state", "discovered through source src-iran-un-ceasefire-20260615", "source link is available", "the feed supplies a substantive excerpt", "text mentions Iran-related developments"],
-        "generated_at": "2026-09-24T22:29:32.308Z",
         "method": "deterministic editorial triage; not an AI or publication decision"
       }
     }
