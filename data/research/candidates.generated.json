@@ -20,7 +20,16 @@
       "review_status": "pending",
       "proposed_claims": [],
       "proposed_events": [],
-      "proposed_forecast_implications": []
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 90,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": ["routed to topic iran-war-end-state", "discovered through source src-iran-un-ceasefire-20260615", "source link is available", "the feed supplies a substantive excerpt", "text mentions armed conflict"],
+        "generated_at": "2026-09-28T00:52:05.626Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
     },
     {
       "id": "candidate-src-iran-un-ceasefire-20260615-Wed, 23 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed",
@@ -34,7 +43,16 @@
       "review_status": "pending",
       "proposed_claims": [],
       "proposed_events": [],
-      "proposed_forecast_implications": []
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 90,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": ["routed to topic iran-war-end-state", "discovered through source src-iran-un-ceasefire-20260615", "source link is available", "the feed supplies a substantive excerpt", "text mentions Iran-related developments"],
+        "generated_at": "2026-09-25T13:55:22.631Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
     },
     {
       "id": "candidate-src-iran-un-ceasefire-20260615-Tue, 22 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed",
@@ -48,7 +66,16 @@
       "review_status": "pending",
       "proposed_claims": [],
       "proposed_events": [],
-      "proposed_forecast_implications": []
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 90,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": ["routed to topic iran-war-end-state", "discovered through source src-iran-un-ceasefire-20260615", "source link is available", "the feed supplies a substantive excerpt", "text mentions Iran-related developments"],
+        "generated_at": "2026-09-24T22:29:32.308Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
     }
   ],
   "errors": []
