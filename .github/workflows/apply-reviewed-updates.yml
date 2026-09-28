@@ -29,7 +29,7 @@ jobs:
       - name: Validate generated records
         run: |
           python3 scripts/validate.py
-          node --test tests/merge-candidates.test.mjs
+          node --test tests/merge-candidates.test.mjs tests/apply-reviewed-candidates.test.mjs
       - name: Create implementation PR
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
