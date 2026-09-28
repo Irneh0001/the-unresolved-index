@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-09-18T08:00:00.000Z",
+  "exported_at": "2026-09-28T07:29:22.367Z",
   "decisions": {
     "candidate-src-tariffs-trade-anchor-Mon, 30 Mar 2009-..%2F..%2Fassets%2FDocument_Libr": "rejected",
     "candidate-src-tariffs-trade-anchor-Tue, 23 Dec 2008-..%2F..%2Fassets%2FDocument_Libr": "rejected",
@@ -74,6 +74,9 @@
     "candidate-src-iran-un-ceasefire-20260615-Thu, 17 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
     "candidate-src-iran-un-ceasefire-20260615-Wed, 16 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "rejected",
     "candidate-src-iran-un-ceasefire-20260615-Tue, 15 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "rejected",
-    "candidate-src-iran-un-ceasefire-20260615-Mon, 14 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved"
+    "candidate-src-iran-un-ceasefire-20260615-Mon, 14 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
+    "candidate-src-iran-un-ceasefire-20260615-Sat, 26 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
+    "candidate-src-iran-un-ceasefire-20260615-Wed, 23 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
+    "candidate-src-iran-un-ceasefire-20260615-Tue, 22 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved"
   }
 }
