@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm run validate
+      - name: Test reviewed update application
+        run: node --test tests/merge-candidates.test.mjs tests/apply-reviewed-candidates.test.mjs
       - name: Check forecast history is append-only
         env:
           FORECAST_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
