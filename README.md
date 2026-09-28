@@ -84,3 +84,8 @@ Open `review.html` from the published site (also linked in the homepage footer).
 ## Consequence and non-resolution risk model
 
 Each topic has a record in `data/research/consequences.js` with a short-term consequence, a long-term consequence if unresolved, severity, confidence, and a non-resolution risk score. These are explicitly labeled editorial assessments and are not treated as current facts. The queue priority calculation incorporates risk alongside importance, uncertainty, and momentum. The topic detail dialog displays the consequence box and its assessment confidence.
+
+
+### One-click reviewed updates
+
+The review page can submit reviewed candidate IDs through a prefilled GitHub review issue. The apply-reviewed-updates.yml workflow accepts requests from the repository owner, validates that the IDs are still pending, removes approved/rejected candidates from the queue, and opens an implementation PR. Approved candidates become source/event records in data/research/approved-updates.js; rejected candidates are only recorded as decisions. The workflow never edits or replaces forecast history, and the implementation PR must still be reviewed and merged.
