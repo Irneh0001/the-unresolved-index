@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-29T08:40:17.240Z",
+  "checked_at": "2026-09-29T15:58:58.946Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -63,6 +63,35 @@
           "no clear policy or conflict signal was detected in the title/excerpt"
         ],
         "generated_at": "2026-09-29T02:03:11.170Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
+    },
+    {
+      "id": "candidate-src-iran-un-ceasefire-20260615-Tue, 29 Sep 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed",
+      "source_id": "src-iran-un-ceasefire-20260615",
+      "topic_id": "iran-war-end-state",
+      "title": "LIVE: Weighing nuclear risks amid rising tensions and war",
+      "url": "https://news.un.org/feed/view/en/story/2026/09/1168483",
+      "published_at": "Tue, 29 Sep 2026 12:00:00 +0000",
+      "discovered_at": "2026-09-29T15:59:10.032Z",
+      "summary": "Amid rising tensions, extreme weather impacts and strikes on nuclear infrastructure in war-torn Iran and Ukraine, UN Member States are returning to the core issue of disarmament on Tuesday, closing out the General Assembly’s High-Level Week with expected calls for greater safeguards.",
+      "review_status": "pending",
+      "proposed_claims": [],
+      "proposed_events": [],
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 100,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": [
+          "routed to topic iran-war-end-state",
+          "discovered through source src-iran-un-ceasefire-20260615",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions armed conflict, Iran-related developments, Ukraine-related developments"
+        ],
+        "generated_at": "2026-09-29T15:59:10.032Z",
         "method": "deterministic editorial triage; not an AI or publication decision"
       }
     }
