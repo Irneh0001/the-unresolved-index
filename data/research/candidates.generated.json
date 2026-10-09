@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-09T16:18:47.825Z",
+  "checked_at": "2026-10-09T20:59:43.469Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -123,20 +123,49 @@
         "generated_at": "2026-10-08T22:10:42.510Z",
         "method": "deterministic editorial triage; not an AI or publication decision"
       }
+    },
+    {
+      "id": "candidate-src-iran-un-ceasefire-20260615-Fri, 09 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed",
+      "source_id": "src-iran-un-ceasefire-20260615",
+      "topic_id": "iran-war-end-state",
+      "title": "‘Serious blow’: Guterres condemns new US sanctions on International Criminal Court",
+      "url": "https://news.un.org/feed/view/en/story/2026/10/1168562",
+      "published_at": "Fri, 09 Oct 2026 12:00:00 +0000",
+      "discovered_at": "2026-10-09T20:59:52.153Z",
+      "summary": "The United States has imposed sanctions on the International Criminal Court (ICC) as an institution, with Secretary of State Marco Rubio vowing on Friday to “dismantle the ICC, brick by brick” unless it ends what Washington regards as a “threat” to its citizens.",
+      "review_status": "pending",
+      "proposed_claims": [],
+      "proposed_events": [],
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 95,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": [
+          "routed to topic iran-war-end-state",
+          "discovered through source src-iran-un-ceasefire-20260615",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions court or judicial action, sanctions or economic pressure"
+        ],
+        "generated_at": "2026-10-09T20:59:52.153Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
     }
   ],
   "errors": [
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-10-09T16:18:47.825Z",
-      "next_check_at": "2026-10-10T16:18:47.825Z"
+      "checked_at": "2026-10-09T20:59:43.469Z",
+      "next_check_at": "2026-10-10T20:59:43.469Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-10-09T16:18:47.825Z",
-      "next_check_at": "2026-10-10T16:18:47.825Z"
+      "checked_at": "2026-10-09T20:59:43.469Z",
+      "next_check_at": "2026-10-10T20:59:43.469Z"
     }
   ]
 }
