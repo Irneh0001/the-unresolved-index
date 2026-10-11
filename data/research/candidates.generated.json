@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-11T15:47:28.376Z",
+  "checked_at": "2026-10-11T20:22:25.939Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -187,20 +187,20 @@
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-10-11T15:47:28.376Z",
-      "next_check_at": "2026-10-12T15:47:28.376Z"
+      "checked_at": "2026-10-11T20:22:25.939Z",
+      "next_check_at": "2026-10-12T20:22:25.939Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-10-11T15:47:28.376Z",
-      "next_check_at": "2026-10-12T15:47:28.376Z"
+      "checked_at": "2026-10-11T20:22:25.939Z",
+      "next_check_at": "2026-10-12T20:22:25.939Z"
     },
     {
       "source_id": "src-iran-un-ceasefire-20260615",
       "error": "HTTP 503",
-      "checked_at": "2026-10-11T15:47:28.376Z",
-      "next_check_at": "2026-10-11T21:47:28.376Z"
+      "checked_at": "2026-10-11T20:22:25.939Z",
+      "next_check_at": "2026-10-12T02:22:25.939Z"
     }
   ]
 }
