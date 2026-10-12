@@ -21,9 +21,8 @@ export function mergeCandidateQueues({ existing = {}, discovered = {}, reviewedI
 
 function isReviewed(candidate, reviewedIds) {
   if (reviewedIds.has(candidate.id)) return true;
-  const prefix = `candidate-${candidate.source_id}-${candidate.published_at ?? "undated"}-`;
-  for (const id of reviewedIds) if (id.startsWith(prefix)) return true;
-  return false;
+  const legacyId = `candidate-${candidate.source_id}-${candidate.published_at ?? "undated"}-${encodeURIComponent(candidate.url ?? "").slice(0,32)}`;
+  return reviewedIds.has(legacyId);
 }
 
 async function readJson(path, fallback) {
