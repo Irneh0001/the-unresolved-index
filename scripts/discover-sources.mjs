@@ -18,8 +18,8 @@ export async function discover({ now = new Date(), fetchImpl = fetch } = {}) {
         if (matchesSourceFilter(source, item)) {
           const normalizedItem = { ...item, url: canonicalUrl(item.url, source.feed_url) };
           const candidate = normalizeCandidate({ source_id: source.id, topic_id: source.topic_id, ...normalizedItem });
-          const legacyPrefix = `candidate-${candidate.source_id}-${candidate.published_at || "undated"}-`;
-          if (!publishedUrls.has(normalizedItem.url) && !reviewed.has(candidate.id) && ![...reviewed].some(id => id.startsWith(legacyPrefix))) candidates.push(candidate);
+          const legacyId = `candidate-${candidate.source_id}-${candidate.published_at || "undated"}-${encodeURIComponent(normalizedItem.url).slice(0,32)}`;
+          if (!publishedUrls.has(normalizedItem.url) && !reviewed.has(candidate.id) && !reviewed.has(legacyId)) candidates.push(candidate);
         }
       }
     } catch (error) {
