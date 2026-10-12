@@ -28,7 +28,7 @@ const pertinenceSignals = [
 export function normalizeCandidate({source_id, topic_id, title, url, published_at=null, summary=""}) {
   const discovered_at = new Date().toISOString();
   const candidate = {
-    id: "candidate-" + source_id + "-" + (published_at ?? "undated") + "-" + encodeURIComponent(url).slice(0,32),
+    id: "candidate-" + source_id + "-" + (published_at ?? "undated") + "-" + encodeURIComponent(url),
     source_id, topic_id, title: String(title ?? "").trim(), url,
     published_at, discovered_at, summary: String(summary ?? "").trim(),
     review_status: "pending", proposed_claims: [], proposed_events: [], proposed_forecast_implications: []
