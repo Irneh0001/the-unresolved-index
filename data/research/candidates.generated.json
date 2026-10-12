@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T16:30:00.000Z",
+  "checked_at": "2026-10-12T23:03:09.272Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -7,19 +7,49 @@
     "src-big-tech-anchor",
     "src-iran-un-ceasefire-20260615"
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "candidate-src-energy-grid-anchor-Tue, 10 Mar 2026 12:00:00 EST-https%3A%2F%2Fwww.eia.gov%2Fpressroom%2Freleases%2Fpress584.php",
+      "source_id": "src-energy-grid-anchor",
+      "topic_id": "energy-grid",
+      "title": "EIA releases latest Short-Term Energy Outlook amid Middle East conflict",
+      "url": "https://www.eia.gov/pressroom/releases/press584.php",
+      "published_at": "Tue, 10 Mar 2026 12:00:00 EST",
+      "discovered_at": "2026-10-12T23:03:18.877Z",
+      "summary": "Crude oil price movements. The Brent crude oil spot price has risen sharply following the onset of military action in the Middle East. Brent settled at $94 per barrel (b) on March 9, up about 50% from the beginning of the year and the highest since September 2023. Crude oil prices have risen as petroleum shipments through the Strait of Hormuz have fallen, and some Middle East oil production has been shut in.",
+      "review_status": "pending",
+      "proposed_claims": [],
+      "proposed_events": [],
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 70,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": [
+          "routed to topic energy-grid",
+          "discovered through source src-energy-grid-anchor",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "no clear policy or conflict signal was detected in the title/excerpt"
+        ],
+        "generated_at": "2026-10-12T23:03:18.877Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
+    }
+  ],
   "errors": [
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-10-12T15:41:59.781Z",
-      "next_check_at": "2026-10-13T15:41:59.781Z"
+      "checked_at": "2026-10-12T23:03:09.272Z",
+      "next_check_at": "2026-10-13T23:03:09.272Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-10-12T15:41:59.781Z",
-      "next_check_at": "2026-10-13T15:41:59.781Z"
+      "checked_at": "2026-10-12T23:03:09.272Z",
+      "next_check_at": "2026-10-13T23:03:09.272Z"
     }
   ]
 }
