@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-10-12T16:45:00.000Z",
+  "exported_at": "2026-10-26T21:00:00.000Z",
   "decisions": {
     "candidate-src-tariffs-trade-anchor-Mon, 30 Mar 2009-..%2F..%2Fassets%2FDocument_Libr": "rejected",
     "candidate-src-tariffs-trade-anchor-Tue, 23 Dec 2008-..%2F..%2Fassets%2FDocument_Libr": "rejected",
@@ -84,6 +84,13 @@
     "candidate-src-iran-un-ceasefire-20260615-Tue, 06 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
     "candidate-src-iran-un-ceasefire-20260615-Fri, 09 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "approved",
     "candidate-src-iran-un-ceasefire-20260615-Thu, 08 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed": "rejected",
-    "candidate-src-iran-un-ceasefire-20260615-Thu, 01 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168503": "rejected"
+    "candidate-src-iran-un-ceasefire-20260615-Thu, 01 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168503": "rejected",
+    "candidate-src-energy-grid-anchor-Tue, 10 Mar 2026 12:00:00 EST-https%3A%2F%2Fwww.eia.gov%2Fpressroom%2Freleases%2Fpress584.php": "approved",
+    "candidate-src-iran-un-ceasefire-20260615-Wed, 14 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168598": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Wed, 14 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168597": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Fri, 16 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168611": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Wed, 21 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168638": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Fri, 23 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168664": "rejected",
+    "candidate-src-iran-un-ceasefire-20260615-Mon, 26 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168669": "approved"
   }
 }
