@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-27T05:15:24.623Z",
+  "checked_at": "2026-10-27T10:40:39.166Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -210,20 +210,49 @@
         "generated_at": "2026-10-26T20:00:56.372Z",
         "method": "deterministic editorial triage; not an AI or publication decision"
       }
+    },
+    {
+      "id": "candidate-src-iran-un-ceasefire-20260615-Mon, 26 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168674",
+      "source_id": "src-iran-un-ceasefire-20260615",
+      "topic_id": "iran-war-end-state",
+      "title": "World News in Brief: Ethiopians flee to Kenya amidst renewed conflict, new head of UN’s food programme, UN mission in Somalia concludes",
+      "url": "https://news.un.org/feed/view/en/story/2026/10/1168674",
+      "published_at": "Mon, 26 Oct 2026 12:00:00 +0000",
+      "discovered_at": "2026-10-27T10:40:40.173Z",
+      "summary": "Around 36,600 people have fled into northern Kenya following an uptick in fighting on the Ethiopian side of the border.&amp;nbsp;",
+      "review_status": "pending",
+      "proposed_claims": [],
+      "proposed_events": [],
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 90,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": [
+          "routed to topic iran-war-end-state",
+          "discovered through source src-iran-un-ceasefire-20260615",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions border or immigration policy"
+        ],
+        "generated_at": "2026-10-27T10:40:40.173Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
     }
   ],
   "errors": [
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-10-27T05:15:24.623Z",
-      "next_check_at": "2026-10-28T05:15:24.623Z"
+      "checked_at": "2026-10-27T10:40:39.166Z",
+      "next_check_at": "2026-10-28T10:40:39.166Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-10-27T05:15:24.623Z",
-      "next_check_at": "2026-10-28T05:15:24.623Z"
+      "checked_at": "2026-10-27T10:40:39.166Z",
+      "next_check_at": "2026-10-28T10:40:39.166Z"
     }
   ]
 }
