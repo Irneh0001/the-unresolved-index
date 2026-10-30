@@ -42,4 +42,6 @@ export const positions = [
  {"id":"pos-iran-iaea-inspections-20261023","topic_id":"iran-war-end-state","actor":"IAEA Director General Rafael Grossi","position":"Grossi calls for the swift return of IAEA inspectors to Iran to reduce fragility in the nuclear non-proliferation regime.","position_type":"nuclear_verification_position","source_ids":["src-cand-iran-un-iaea-inspections-20261023"],"observed_at":"2026-10-23","status":"current"},
  {"id":"pos-iran-guterres-escalation-20261026","topic_id":"iran-war-end-state","actor":"UN Secretary-General António Guterres","position":"Guterres calls for dialogue and diplomacy to end the Iran–US war and warns against escalation.","position_type":"diplomatic_position","source_ids":["src-cand-iran-guterres-escalation-20261026"],"observed_at":"2026-10-26","status":"current"},
 
+,
+ {"id":"pos-iran-iaea-inspections-20261027","topic_id":"iran-war-end-state","actor":"International Atomic Energy Agency","position":"The IAEA calls for Iran nuclear inspections to resume, underscoring the need for renewed verification access.","position_type":"nuclear_verification_position","source_ids":["src-cand-iran-un-iaea-inspections-20261027"],"observed_at":"2026-10-27","status":"current"},
 ];

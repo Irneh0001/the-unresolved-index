@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-10-30T12:00:00.000Z",
+  "decisions": [
+    {
+      "candidate_id": "candidate-src-iran-un-ceasefire-20260615-Mon, 26 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168674",
+      "status": "rejected",
+      "reviewed_at": "2026-10-30T12:00:00.000Z",
+      "reason": "Misrouted: Ethiopia/Kenya reporting contains no Iran-related evidence."
+    },
+    {
+      "candidate_id": "candidate-src-iran-un-ceasefire-20260615-Tue, 27 Oct 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F10%2F1168682",
+      "status": "approved",
+      "reviewed_at": "2026-10-30T12:00:00.000Z",
+      "reason": "Approved narrowly for the attributed IAEA call for Iran nuclear inspections; unrelated Ukraine/Kenya items excluded."
+    }
+  ]
+}
