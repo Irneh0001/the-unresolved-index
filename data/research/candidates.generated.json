@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T09:59:09.299Z",
+  "checked_at": "2026-11-10T17:56:54.538Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -152,20 +152,49 @@
         "generated_at": "2026-10-31T15:23:22.024Z",
         "method": "deterministic editorial triage; not an AI or publication decision"
       }
+    },
+    {
+      "id": "candidate-src-energy-grid-anchor-Tue, 10 Nov 2026 12:00:00 EST-https%3A%2F%2Fwww.eia.gov%2Fpressroom%2Freleases%2Fpress594.php",
+      "source_id": "src-energy-grid-anchor",
+      "topic_id": "energy-grid",
+      "title": "EIA raises November natural gas storage forecast after warm start to month",
+      "url": "https://www.eia.gov/pressroom/releases/press594.php",
+      "published_at": "Tue, 10 Nov 2026 12:00:00 EST",
+      "discovered_at": "2026-11-10T17:56:54.973Z",
+      "summary": "The U.S. Energy Information Administration (EIA) expects almost 70 billion cubic feet more natural gas to be in U.S. storage at the end of November than it forecast in October. A warm start to the month is easing pressure on natural gas prices.",
+      "review_status": "pending",
+      "proposed_claims": [],
+      "proposed_events": [],
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 90,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": [
+          "routed to topic energy-grid",
+          "discovered through source src-energy-grid-anchor",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions armed conflict"
+        ],
+        "generated_at": "2026-11-10T17:56:54.973Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
     }
   ],
   "errors": [
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-11-10T09:59:09.299Z",
-      "next_check_at": "2026-11-11T09:59:09.299Z"
+      "checked_at": "2026-11-10T17:56:54.538Z",
+      "next_check_at": "2026-11-11T17:56:54.538Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-11-10T09:59:09.299Z",
-      "next_check_at": "2026-11-11T09:59:09.299Z"
+      "checked_at": "2026-11-10T17:56:54.538Z",
+      "next_check_at": "2026-11-11T17:56:54.538Z"
     }
   ]
 }
