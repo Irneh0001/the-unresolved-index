@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-13T17:51:03.638Z",
+  "checked_at": "2026-11-13T23:40:14.722Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -7,19 +7,49 @@
     "src-big-tech-anchor",
     "src-iran-un-ceasefire-20260615"
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "candidate-src-iran-un-ceasefire-20260615-Fri, 13 Nov 2026 12:00:00 +0000-https%3A%2F%2Fnews.un.org%2Ffeed%2Fview%2Fen%2Fstory%2F2026%2F11%2F1168804",
+      "source_id": "src-iran-un-ceasefire-20260615",
+      "topic_id": "iran-war-end-state",
+      "title": "Security Council LIVE: Fragile Gulf calm tested as threats to Hormuz shipping mount",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168804",
+      "published_at": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "discovered_at": "2026-11-13T23:40:15.336Z",
+      "summary": "Nearly nine months after Israeli and US strikes on Iran set off a regional war, the Gulf remains on a knife edge. Iran has all but closed the Strait of Hormuz, which carried a fifth of the world’s oil before the conflict. Attacks on shipping are rising, and efforts to stop a return to full-scale fighting have yet to produce a deal. The Security Council is meeting at Bahrain’s request to discuss the threat to regional and maritime security. Follow live below – and for full meetings coverage year round, go here.",
+      "review_status": "pending",
+      "proposed_claims": [],
+      "proposed_events": [],
+      "proposed_forecast_implications": [],
+      "automated_review_comment": {
+        "assessment": "likely_pertinent",
+        "score": 95,
+        "label": "likely pertinent",
+        "comment": "Automated triage finds a likely connection to the routed topic. Check the source and confirm the specific factual or interpretive relevance before approval.",
+        "basis": [
+          "routed to topic iran-war-end-state",
+          "discovered through source src-iran-un-ceasefire-20260615",
+          "source link is available",
+          "the feed supplies a substantive excerpt",
+          "text mentions armed conflict, Iran-related developments"
+        ],
+        "generated_at": "2026-11-13T23:40:15.336Z",
+        "method": "deterministic editorial triage; not an AI or publication decision"
+      }
+    }
+  ],
   "errors": [
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-11-13T17:51:03.638Z",
-      "next_check_at": "2026-11-14T17:51:03.638Z"
+      "checked_at": "2026-11-13T23:40:14.722Z",
+      "next_check_at": "2026-11-14T23:40:14.722Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-11-13T17:51:03.638Z",
-      "next_check_at": "2026-11-14T17:51:03.638Z"
+      "checked_at": "2026-11-13T23:40:14.722Z",
+      "next_check_at": "2026-11-14T23:40:14.722Z"
     }
   ]
 }
