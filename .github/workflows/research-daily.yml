@@ -14,6 +14,8 @@ jobs:
         run: python3 scripts/validate.py
       - name: Test candidate queue merge
         run: node --test tests/merge-candidates.test.mjs
+      - name: Test research data imports for rendering
+        run: node --test tests/research-data-integrity.test.mjs
       - name: Preserve historical forecasts
         env:
           HISTORY_BASE_SHA: "${{ github.event.before }}"
