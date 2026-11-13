@@ -39,4 +39,11 @@ export const approvedUpdates = [
     "source": {"id":"src-cand-iran-un-iaea-inspections-20261027","title":"World News in Brief: ‘No safe place in Ukraine’, IAEA calls for Iran nuclear inspections, Kenya hosts thousands of Ethiopians fleeing clashes","publisher":"UN News","url":"https://news.un.org/feed/view/en/story/2026/10/1168682","published_at":"2026-10-27","retrieved_at":"2026-10-30","source_class":"primary_international","authority_level":4,"country":"Iran","domains":["Geopolitics","Law & rights"],"reliability_notes":"Mixed brief; only the attributed IAEA/Iran item was integrated.","supports_claims":["clm-iran-iaea-inspections-20261027"],"contradicts_claims":[]},
     "event": {"id":"evt-iran-iaea-inspections-20261027","topic_id":"iran-war-end-state","date":"2026-10-27","title":"IAEA calls for Iran nuclear inspections to resume","description":"UN News reported an IAEA call for renewed inspections; unrelated Ukraine and Kenya items were excluded.","event_type":"nuclear_verification_statement","importance":85,"source_ids":["src-cand-iran-un-iaea-inspections-20261027"],"materiality":"material"}
   }
+,
+  {
+    "candidate_id":"candidate-src-energy-grid-anchor-Tue, 10 Nov 2026 12:00:00 EST-https%3A%2F%2Fwww.eia.gov%2Fpressroom%2Freleases%2Fpress594.php",
+    "applied_at":"2026-11-13T12:00:00.000Z",
+    "source":{"id":"src-cand-eia-gas-storage-20261110","title":"EIA raises November natural gas storage forecast after warm start to month","publisher":"U.S. Energy Information Administration","url":"https://www.eia.gov/pressroom/releases/press594.php","published_at":"2026-11-10","retrieved_at":"2026-11-13","source_class":"primary_government","authority_level":5,"country":"United States","domains":["Economy"],"reliability_notes":"Official EIA storage forecast; conditional on stated weather and market assumptions.","supports_claims":["clm-eia-gas-storage-20261110"],"contradicts_claims":[]},
+    "event":{"id":"evt-eia-gas-storage-20261110","topic_id":"energy-grid","date":"2026-11-10","title":"EIA raises November natural-gas storage forecast","description":"EIA reported that a warm start to November increased expected U.S. natural-gas storage and eased near-term heating-demand pressure.","event_type":"energy_forecast","importance":65,"source_ids":["src-cand-eia-gas-storage-20261110"],"materiality":"material"}
+  }
 ];
