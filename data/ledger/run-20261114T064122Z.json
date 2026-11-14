@@ -1,0 +1,11 @@
+{
+  "run_id": "infra-20261114T064122Z",
+  "timestamp": "2026-11-14T06:41:22.489400+00:00",
+  "research_mode": "infrastructure_only",
+  "topics_queued": 20,
+  "stale_topics": 20,
+  "material_changes_detected": null,
+  "resolution_candidates": null,
+  "validation_status": "PASS",
+  "no_research_performed": true
+}
