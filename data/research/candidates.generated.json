@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-15T11:11:31.449Z",
+  "checked_at": "2026-11-15T17:49:31.236Z",
   "sources_checked": [
     "src-ftc-ai-comply",
     "src-energy-grid-anchor",
@@ -42,14 +42,14 @@
     {
       "source_id": "src-ftc-ai-comply",
       "error": "HTTP 404",
-      "checked_at": "2026-11-15T11:11:31.449Z",
-      "next_check_at": "2026-11-16T11:11:31.449Z"
+      "checked_at": "2026-11-15T17:49:31.236Z",
+      "next_check_at": "2026-11-16T17:49:31.236Z"
     },
     {
       "source_id": "src-big-tech-anchor",
       "error": "HTTP 404",
-      "checked_at": "2026-11-15T11:11:31.449Z",
-      "next_check_at": "2026-11-16T11:11:31.449Z"
+      "checked_at": "2026-11-15T17:49:31.236Z",
+      "next_check_at": "2026-11-16T17:49:31.236Z"
     }
   ]
 }
